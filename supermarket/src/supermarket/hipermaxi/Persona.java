@@ -2,29 +2,27 @@ package supermarket.hipermaxi;
 
 public abstract class Persona {
 
-    protected String nombre;
+    private String nombre;
     protected int carnetIdentidad;
+    private int edad;
 
-    public Persona(String nombre, int carnetIdentidad) {
+    public Persona(String nombre, int carnetIdentidad, int edad) {
         this.nombre = nombre;
         this.carnetIdentidad = carnetIdentidad;
+        this.edad = edad;
     }
-
     public String getNombre() {
         return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
     }
 
     public int getCarnetIdentidad() {
         return carnetIdentidad;
     }
 
-    public void setCarnetIdentidad(int carnetIdentidad) {
-        this.carnetIdentidad = carnetIdentidad;
+    public int getEdad(){
+        return edad;
     }
+
     @Override
     public String toString() {
         return "Nombre: " + nombre + ", Carnet de Identidad: " + carnetIdentidad;
